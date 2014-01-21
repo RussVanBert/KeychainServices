@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D4055798188E938F00C49EAB /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4055797188E938F00C49EAB /* KeychainItemWrapper.m */; };
 		D4460BF5188E91C5000F4A1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4460BF4188E91C5000F4A1C /* Foundation.framework */; };
 		D4460BF7188E91C5000F4A1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4460BF6188E91C5000F4A1C /* CoreGraphics.framework */; };
 		D4460BF9188E91C5000F4A1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4460BF8188E91C5000F4A1C /* UIKit.framework */; };
@@ -22,6 +21,10 @@
 		D4460C16188E91C5000F4A1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4460BF8188E91C5000F4A1C /* UIKit.framework */; };
 		D4460C1E188E91C5000F4A1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4460C1C188E91C5000F4A1C /* InfoPlist.strings */; };
 		D4460C20188E91C5000F4A1C /* KeychainServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4460C1F188E91C5000F4A1C /* KeychainServicesTests.m */; };
+		D4B6433E188EA1BC00B5D862 /* keychain_80.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B6433B188EA1BC00B5D862 /* keychain_80.png */; };
+		D4B6433F188EA1BC00B5D862 /* keychain_58.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B6433C188EA1BC00B5D862 /* keychain_58.png */; };
+		D4BE21F7188EA28200267A0B /* keychain_120.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BE21F6188EA28200267A0B /* keychain_120.png */; };
+		D4BE21FA188EA32D00267A0B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BE21F9188EA32D00267A0B /* KeychainItemWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,6 @@
 
 /* Begin PBXFileReference section */
 		D405576B188E929D00C49EAB /* KeychainServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KeychainServices.entitlements; sourceTree = "<group>"; };
-		D4055796188E938F00C49EAB /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = ../KeychainItemWrapper.h; sourceTree = "<group>"; };
-		D4055797188E938F00C49EAB /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = ../KeychainItemWrapper.m; sourceTree = "<group>"; };
 		D4460BF1188E91C5000F4A1C /* KeychainServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4460BF4188E91C5000F4A1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4460BF6188E91C5000F4A1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,6 +58,11 @@
 		D4460C1B188E91C5000F4A1C /* KeychainServicesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KeychainServicesTests-Info.plist"; sourceTree = "<group>"; };
 		D4460C1D188E91C5000F4A1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D4460C1F188E91C5000F4A1C /* KeychainServicesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainServicesTests.m; sourceTree = "<group>"; };
+		D4B6433B188EA1BC00B5D862 /* keychain_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keychain_80.png; sourceTree = "<group>"; };
+		D4B6433C188EA1BC00B5D862 /* keychain_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keychain_58.png; sourceTree = "<group>"; };
+		D4BE21F6188EA28200267A0B /* keychain_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keychain_120.png; sourceTree = "<group>"; };
+		D4BE21F8188EA32D00267A0B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		D4BE21F9188EA32D00267A0B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,16 +122,16 @@
 		D4460BFA188E91C5000F4A1C /* KeychainServices */ = {
 			isa = PBXGroup;
 			children = (
-				D405576B188E929D00C49EAB /* KeychainServices.entitlements */,
 				D4460C03188E91C5000F4A1C /* AppDelegate.h */,
 				D4460C04188E91C5000F4A1C /* AppDelegate.m */,
+				D4460C0C188E91C5000F4A1C /* Images.xcassets */,
+				D4BE21F8188EA32D00267A0B /* KeychainItemWrapper.h */,
+				D4BE21F9188EA32D00267A0B /* KeychainItemWrapper.m */,
+				D405576B188E929D00C49EAB /* KeychainServices.entitlements */,
 				D4460C06188E91C5000F4A1C /* Main.storyboard */,
-				D4055796188E938F00C49EAB /* KeychainItemWrapper.h */,
-				D4055797188E938F00C49EAB /* KeychainItemWrapper.m */,
+				D4460BFB188E91C5000F4A1C /* Supporting Files */,
 				D4460C09188E91C5000F4A1C /* ViewController.h */,
 				D4460C0A188E91C5000F4A1C /* ViewController.m */,
-				D4460C0C188E91C5000F4A1C /* Images.xcassets */,
-				D4460BFB188E91C5000F4A1C /* Supporting Files */,
 			);
 			path = KeychainServices;
 			sourceTree = "<group>";
@@ -133,6 +139,9 @@
 		D4460BFB188E91C5000F4A1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D4B6433C188EA1BC00B5D862 /* keychain_58.png */,
+				D4B6433B188EA1BC00B5D862 /* keychain_80.png */,
+				D4BE21F6188EA28200267A0B /* keychain_120.png */,
 				D4460BFC188E91C5000F4A1C /* KeychainServices-Info.plist */,
 				D4460BFD188E91C5000F4A1C /* InfoPlist.strings */,
 				D4460C00188E91C5000F4A1C /* main.m */,
@@ -243,8 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4460C0D188E91C5000F4A1C /* Images.xcassets in Resources */,
+				D4B6433F188EA1BC00B5D862 /* keychain_58.png in Resources */,
+				D4B6433E188EA1BC00B5D862 /* keychain_80.png in Resources */,
 				D4460BFF188E91C5000F4A1C /* InfoPlist.strings in Resources */,
 				D4460C08188E91C5000F4A1C /* Main.storyboard in Resources */,
+				D4BE21F7188EA28200267A0B /* keychain_120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4055798188E938F00C49EAB /* KeychainItemWrapper.m in Sources */,
+				D4BE21FA188EA32D00267A0B /* KeychainItemWrapper.m in Sources */,
 				D4460C0B188E91C5000F4A1C /* ViewController.m in Sources */,
 				D4460C05188E91C5000F4A1C /* AppDelegate.m in Sources */,
 				D4460C01188E91C5000F4A1C /* main.m in Sources */,
