@@ -1,20 +1,20 @@
+#import "Keychain.h"
 #import "ViewController.h"
 
 @implementation ViewController
 
-@synthesize name, password, keychain;
+@synthesize name, password;
 
 - (void)viewDidLoad {
   name.delegate = self;
   password.delegate = self;
   
-  keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppKeychainId" accessGroup:nil];
   [self textFields];
 }
 
 - (void)textFields {
-  NSString *nameFromKeychain = [keychain objectForKey:b_kSecAttrAccount];
-  NSString *passwordFromKeychain = [keychain objectForKey:b_kSecValueData];
+  NSString *nameFromKeychain = [[Keychain sharedKeychain] objectForKey:b_kSecAttrAccount];
+  NSString *passwordFromKeychain = [[Keychain sharedKeychain] objectForKey:b_kSecValueData];
   
   NSLog(@"\nName: %@\nPassword: %@", nameFromKeychain, passwordFromKeychain);
   name.text = nameFromKeychain;
@@ -23,8 +23,8 @@
 
 - (IBAction)addToKeychain:(id)sender
 {
-  [keychain setObject:name.text forKey:b_kSecAttrAccount];
-  [keychain setObject:password.text forKey:b_kSecValueData];
+  [[Keychain sharedKeychain] setObject:name.text forKey:b_kSecAttrAccount];
+  [[Keychain sharedKeychain] setObject:password.text forKey:b_kSecValueData];
 }
 
 - (IBAction)retreiveKeyFromKeychain:(id)sender

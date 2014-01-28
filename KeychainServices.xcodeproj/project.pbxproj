@@ -25,6 +25,7 @@
 		D4B6433F188EA1BC00B5D862 /* keychain_58.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B6433C188EA1BC00B5D862 /* keychain_58.png */; };
 		D4BE21F7188EA28200267A0B /* keychain_120.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BE21F6188EA28200267A0B /* keychain_120.png */; };
 		D4BE21FA188EA32D00267A0B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BE21F9188EA32D00267A0B /* KeychainItemWrapper.m */; };
+		D4CE3FC11897349E00F3FA38 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CE3FC01897349E00F3FA38 /* Keychain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		D4BE21F6188EA28200267A0B /* keychain_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keychain_120.png; sourceTree = "<group>"; };
 		D4BE21F8188EA32D00267A0B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		D4BE21F9188EA32D00267A0B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		D4CE3FBF1897349E00F3FA38 /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		D4CE3FC01897349E00F3FA38 /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				D4460C03188E91C5000F4A1C /* AppDelegate.h */,
 				D4460C04188E91C5000F4A1C /* AppDelegate.m */,
 				D4460C0C188E91C5000F4A1C /* Images.xcassets */,
+				D4CE3FBF1897349E00F3FA38 /* Keychain.h */,
+				D4CE3FC01897349E00F3FA38 /* Keychain.m */,
 				D4BE21F8188EA32D00267A0B /* KeychainItemWrapper.h */,
 				D4BE21F9188EA32D00267A0B /* KeychainItemWrapper.m */,
 				D405576B188E929D00C49EAB /* KeychainServices.entitlements */,
@@ -279,6 +284,7 @@
 				D4460C0B188E91C5000F4A1C /* ViewController.m in Sources */,
 				D4460C05188E91C5000F4A1C /* AppDelegate.m in Sources */,
 				D4460C01188E91C5000F4A1C /* main.m in Sources */,
+				D4CE3FC11897349E00F3FA38 /* Keychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
