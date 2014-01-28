@@ -29,5 +29,6 @@
 - (id)objectForKey:(id)key;
 
 - (void)resetKeychainItem;
+- (void)resetObjectForKey:(id)key;
 
 @end

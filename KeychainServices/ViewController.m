@@ -21,14 +21,17 @@
   password.text = passwordFromKeychain;
 }
 
-- (IBAction)addToKeychain:(id)sender
-{
+- (IBAction)addToKeychain:(id)sender {
   [[Keychain sharedKeychain] setObject:name.text forKey:b_kSecAttrAccount];
   [[Keychain sharedKeychain] setObject:password.text forKey:b_kSecValueData];
 }
 
-- (IBAction)retreiveKeyFromKeychain:(id)sender
-{
+- (IBAction)retreiveKeyFromKeychain:(id)sender {
+  [self textFields];
+}
+
+- (IBAction)resetPassword:(id)sender {
+  [[Keychain sharedKeychain] resetObjectForKey:b_kSecValueData];
   [self textFields];
 }
 
@@ -37,8 +40,7 @@
   return YES;
 }
 
-- (IBAction)backgroundTapped:(id)sender
-{
+- (IBAction)backgroundTapped:(id)sender {
   [self.view endEditing:YES];
 }
 

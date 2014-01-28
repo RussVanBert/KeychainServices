@@ -8,6 +8,7 @@
 
 - (IBAction)addToKeychain:(id)sender;
 - (IBAction)retreiveKeyFromKeychain:(id)sender;
+- (IBAction)resetPassword:(id)sender;
 
 - (IBAction)backgroundTapped:(id)sender;
 

@@ -101,6 +101,12 @@
   return _keychainItemData[key];
 }
 
+- (void)resetObjectForKey:(id)key
+{
+  _keychainItemData[key] = @"";
+  [self writeToKeychain];
+}
+
 - (void)resetKeychainItem
 {
   OSStatus result = noErr;
