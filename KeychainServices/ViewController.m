@@ -26,7 +26,7 @@
   [[Keychain sharedKeychain] setObject:password.text forKey:b_kSecValueData];
 }
 
-- (IBAction)retreiveKeyFromKeychain:(id)sender {
+- (IBAction)retrieveKeyFromKeychain:(id)sender {
   [self textFields];
 }
 

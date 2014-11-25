@@ -7,7 +7,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *password;
 
 - (IBAction)addToKeychain:(id)sender;
-- (IBAction)retreiveKeyFromKeychain:(id)sender;
+- (IBAction)retrieveKeyFromKeychain:(id)sender;
 - (IBAction)resetPassword:(id)sender;
 
 - (IBAction)backgroundTapped:(id)sender;
