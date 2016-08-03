@@ -28,8 +28,8 @@
     _genericPasswordQuery[b_kSecClass] = b_kSecClassGenericPassword;
     _genericPasswordQuery[b_kSecAttrGeneric] = identifier;
     
-		// The keychain access group attribute determines if this item can be shared
-		// amongst multiple apps whose code signing entitlements contain the same keychain access group.
+    // The keychain access group attribute determines if this item can be shared
+    // amongst multiple apps whose code signing entitlements contain the same keychain access group.
 #if !TARGET_IPHONE_SIMULATOR
     // Ignore the access group if running on the iPhone simulator.
     //
@@ -44,7 +44,7 @@
     }
 #endif
     
-		// Use the proper search constants, return only the attributes of the first match.
+    // Use the proper search constants, return only the attributes of the first match.
     _genericPasswordQuery[b_kSecMatchLimit] = b_kSecMatchLimitOne;
     _genericPasswordQuery[b_kSecReturnAttributes] = (b_id)kCFBooleanTrue;
     
@@ -60,14 +60,14 @@
       if (accessGroup != nil) {
         // Add the generic attribute and the keychain access group.
         //
-				// Ignore the access group if running on the iPhone simulator.
-				//
-				// Apps that are built for the simulator aren't signed, so there's no keychain access group
-				// for the simulator to check. This means that all apps can see all keychain items when run
-				// on the simulator.
-				//
-				// If a SecItem contains an access group attribute, SecItemAdd and SecItemUpdate on the
-				// simulator will return -25243 (errSecNoAccessForItem).
+        // Ignore the access group if running on the iPhone simulator.
+        //
+        // Apps that are built for the simulator aren't signed, so there's no keychain access group
+        // for the simulator to check. This means that all apps can see all keychain items when run
+        // on the simulator.
+        //
+        // If a SecItem contains an access group attribute, SecItemAdd and SecItemUpdate on the
+        // simulator will return -25243 (errSecNoAccessForItem).
         _keychainItemData[b_kSecAttrAccessGroup] = accessGroup;
       }
 #endif
@@ -137,7 +137,7 @@
   // Add the Generic Password keychain item class attribute.
   returnDictionary[b_kSecClass] = b_kSecClassGenericPassword;
   // Convert the NSString to NSData to meet the requirements for the value type kSecValueData.
-	// This is where to store sensitive data that should be encrypted.
+  // This is where to store sensitive data that should be encrypted.
   returnDictionary[b_kSecValueData] = [[dictionaryToConvert objectForKey:b_kSecValueData]
                                        dataUsingEncoding:NSUTF8StringEncoding];
   return returnDictionary;
@@ -193,17 +193,17 @@
     [tempCheck removeObjectForKey:b_kSecClass];
     
 #if TARGET_IPHONE_SIMULATOR
-		// Remove the access group if running on the iPhone simulator.
-		//
-		// Apps that are built for the simulator aren't signed, so there's no keychain access group
-		// for the simulator to check. This means that all apps can see all keychain items when run
-		// on the simulator.
-		//
-		// If a SecItem contains an access group attribute, SecItemAdd and SecItemUpdate on the
-		// simulator will return -25243 (errSecNoAccessForItem).
-		//
-		// The access group attribute will be included in items returned by SecItemCopyMatching,
-		// which is why we need to remove it before updating the item.
+    // Remove the access group if running on the iPhone simulator.
+    //
+    // Apps that are built for the simulator aren't signed, so there's no keychain access group
+    // for the simulator to check. This means that all apps can see all keychain items when run
+    // on the simulator.
+    //
+    // If a SecItem contains an access group attribute, SecItemAdd and SecItemUpdate on the
+    // simulator will return -25243 (errSecNoAccessForItem).
+    //
+    // The access group attribute will be included in items returned by SecItemCopyMatching,
+    // which is why we need to remove it before updating the item.
     [tempCheck removeObjectForKey:b_kSecAttrAccessGroup];
 #endif
 
