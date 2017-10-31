@@ -51,7 +51,7 @@
     NSDictionary *tempQuery = [NSDictionary dictionaryWithDictionary:_genericPasswordQuery];
     CFMutableDictionaryRef outDictionary = nil;
     
-    if (! SecItemCopyMatching((b_CFDictionaryRef)tempQuery, (CFTypeRef *)&outDictionary) == noErr) {
+    if (SecItemCopyMatching((b_CFDictionaryRef)tempQuery, (CFTypeRef *)&outDictionary) != noErr) {
       // Stick these default values into keychain item if nothing found.
       [self resetKeychainItem];
       _keychainItemData[b_kSecAttrGeneric] = identifier;
